@@ -1,6 +1,6 @@
 {
   "name": "bc-qr-reader",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "QR Code reader for AngularJS, powered by Lazarsoft QR parser.",
   "main": "dist/bc-qr-reader.js",
   "dependencies": {},

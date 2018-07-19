@@ -43,7 +43,7 @@ bcQrReader = ($timeout) ->
         catch e
           $timeout((->
             scope.lookForQR()
-          ), 250)
+          ), 100)
 
         if res?
           scope.onResult(res)
