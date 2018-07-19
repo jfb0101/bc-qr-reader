@@ -9,6 +9,7 @@ bcQrReader = ($timeout) ->
       active: '='
       cameraStatus: '='
       qrStream: '='
+	    checkFrequency:'@'
     }
     template: '<div><webcam on-stream="onStream(stream)" on-error="onError(err)" ng-if="active" channel="channel"></webcam><canvas id="qr-canvas"></canvas></div>'
     link: (scope, elem, attrs) ->
@@ -43,7 +44,7 @@ bcQrReader = ($timeout) ->
         catch e
           $timeout((->
             scope.lookForQR()
-          ), 100)
+          ), scope.checkFrequency || 250)
 
         if res?
           scope.onResult(res)
