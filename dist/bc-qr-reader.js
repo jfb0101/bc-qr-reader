@@ -3834,7 +3834,8 @@ bcQrReader = function($timeout) {
       return scope.lookForQR = function() {
         var canvas, e, res, video;
         canvas = document.getElementById("qr-canvas");
-        video = document.getElementsByTagName("video")[0];
+				video = document.getElementsByTagName("video")[0];
+				if(!video)return;
         if ((video != null) && video.videoWidth > 0) {
           canvas.width = video.videoWidth;
           canvas.height = video.videoHeight;

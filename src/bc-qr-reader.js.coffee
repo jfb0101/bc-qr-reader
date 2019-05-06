@@ -29,6 +29,9 @@ bcQrReader = ($timeout) ->
       scope.lookForQR = () ->
         canvas = document.getElementById("qr-canvas")
         video = document.getElementsByTagName("video")[0]
+        
+        if !video
+          return 
 
         if video? && video.videoWidth > 0
           # This won't be set at the first iteration.
